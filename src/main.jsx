@@ -4,16 +4,24 @@ import Experience from './Experience'
 import React from 'react'
 
 import './index.css'
-import SiteHTML from './SiteHTML'
+import './SiteHTML'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     
-    <SiteHTML />
+    {/* <SiteHTML /> */}
     
-    {/* <Canvas>
+    <Canvas
+      shadows
+      camera={ {
+          fov: 45,
+          near: 0.1,
+          far: 200,
+          position: [ 0, 0, 6 ]
+      } }
+    >
       <Experience />
-    </Canvas> */}
+    </Canvas>
 
     {/* <App /> */}
   </React.StrictMode>
