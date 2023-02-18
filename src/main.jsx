@@ -3,6 +3,7 @@ import React from 'react'
 import { Suspense } from 'react'
 import Experience from './Experience.jsx/'
 import { Canvas } from '@react-three/fiber'
+import zustand from 'zustand'
 
 import Header from './components/Header'
 import Loader from './components/Loader'
@@ -14,7 +15,7 @@ import Lights from './world/Lights'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Header />
+    {/* <Header /> */}
     <Canvas
         shadows
         camera={ {

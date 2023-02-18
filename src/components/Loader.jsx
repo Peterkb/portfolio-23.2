@@ -1,29 +1,39 @@
-import './Loader.css'
-import loaderLogo from '../assets/img/LogoPB.png'
 import { useProgress } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
-import { useEffect, useRef, useState } from 'react'
+import { addEffect } from '@react-three/fiber'
+import { useRef, useEffect } from 'react'
+import useSite from '../stores/useSite'
+
+import loaderLogo from '../assets/img/LogoPB.png'
+import './Loader.css'
 
 export default function Loader()
 {
-    counter = useRef()
+    const counter = useRef()
 
-    const maxPercentage = 100
-    
-    seEffect(() => {
-        const unsubscribeEffect = addEffect(() => {
-            let elapsedTime = 0
+    const phase = useSite((state) => { state.phase } )
 
-            if( < maxPercentage)
-                elapsedTime = Date.now() - state.startTime
-            else if(state.phase === 'ended')
-                elapsedTime = state.endTime - state.startTime
+    useEffect(() => {
+        const unsubscribeEffect = addEffect(() =>
+        {
+            const state = useSite.getState()
 
-            elapsedTime /= 1000
-            elapsedTime = elapsedTime.toFixed(2)
+            if(state.startTime = 0) state.startTime = Date.now()
+
+            let counterVal = 0
             
-            if(time.current)
-                time.current.textContent = elapsedTime
+            if( state.siteProgress < state.maxProgress )
+                counterVal = Date.now() - state.startTime
+            else if( state.phase === 'ready' )
+                counterVal = state.endTime - state.startTime
+
+            counterVal /= 1000
+            counterVal = counterVal.toFixed(2)
+            
+            if(counter.current)
+                counter.current.textContent = counterVal
+
+            console.log(state.startTime);
+            console.log(state.endTime);
         })
 
         return () => {
@@ -47,7 +57,7 @@ export default function Loader()
                     <span className="sh-2">.</span>
                     <span className="sh-3">Load</span>
                     <span className='sh-4'>()</span>
-                    <span useRef={counter}>0</span>
+                    <span ref={ counter }>0</span>
                 </div>
 
                 <div className='loader-text-name'>
