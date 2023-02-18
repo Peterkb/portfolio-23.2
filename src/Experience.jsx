@@ -6,13 +6,13 @@ export default function Experience()
 {
     const cube = useRef()
 
-    // var time = 0
+    var time = 0
 
-    // useFrame((state, delta) => {
-    //     time += delta
-    //     cube.current.rotation.y += delta
-    //     cube.current.position.x = Math.sin(time)
-    // })
+    useFrame((state, delta) => {
+        time += delta
+        cube.current.rotation.y += delta
+        cube.current.rotation.x += delta
+    })
 
     return <>
         {/* <Perf position="top-left" /> */}
@@ -20,19 +20,13 @@ export default function Experience()
         <OrbitControls makeDefault />
 
         <directionalLight position={ [ 1, 2, 3 ] } intensity={ 1.5 } />
-        
+
         <ambientLight intensity={ 0.5 } />
 
         <mesh
             ref={cube}
-            position={[0, 0, -1]}
-            scale={[18, 9, 1]}
+            position={[5.2,2.3,-2]}
         >
-            <planeGeometry />
-            <meshStandardMaterial color='#121212' />
-        </mesh>
-
-        <mesh ref={cube}>
             <boxBufferGeometry />
             <meshStandardMaterial color='mediumpurple' />
         </mesh>

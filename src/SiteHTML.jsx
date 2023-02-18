@@ -9,6 +9,6 @@ export default function SiteHTML()
     return <>
         { loading ? <Loader /> : null }
         
-        <Home />
+        {/* <Home /> */}
     </>
 }
