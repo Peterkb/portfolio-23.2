@@ -1,4 +1,4 @@
-import { Html, OrbitControls, useGLTF  } from "@react-three/drei"
+import { Html, OrbitControls, useGLTF, Text3D  } from "@react-three/drei"
 import { Canvas, useFrame, useLoader } from "@react-three/fiber"
 import { Suspense, useRef } from "react"
 import { GitLogo as GitLogo, LinkedInLogo as LinkedInLogo  } from "./components/models/Logos"
@@ -8,29 +8,45 @@ import Lights from "./world/Lights"
 export default function Experience()
 {
     return <>
-        {/* <Header /> */}        
             <Lights />
             <OrbitControls />
 
             <Html fullscreen>
                 
                 {/* Hero Section */}
-                {/* <div className="container">
-                    <h1 className="title">hello</h1>
-                </div> */}
+                
+                <div className="container">
+                    <h1 className="title">Full Stack Developer</h1>                    
+                </div>
 
                 {/* About Section */}
+                <div className="container">                    
                     {/* About Me */}
+                    <h2 className="title">About Me</h2>
+                    
                     {/* My Skills */}
+                    <h2 className="title">About Me</h2>
+                </div>
                 
                 {/* Projects Section */}
+                <div className="container">
+                    
                     {/* Full Stack */}
+                    <h2>Full Stack Projects</h2>
+
                     {/* Real World Projects */}
+                    <h2>Real World Projects</h2>
+
                     {/* Coding challenges */}
+                    <h2>Coding Challenges</h2>
+                </div>
 
-                {/* Contact Page */}
+                <div className="container">
+                    {/* Contact Page */}
+                    <h2>Contact Me</h2>
+                </div>
 
-            </Html>           
+            </Html>
 
             <mesh
                 position={[0, 0, 0]}

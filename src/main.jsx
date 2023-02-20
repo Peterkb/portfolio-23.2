@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom/client'
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Experience from './Experience.jsx/'
 import LoadingPage from './components/LoadingPage.jsx'
 import './index.css'
 
-import Lights from './world/Lights'
+import Navbar from './components/Navbar'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -18,8 +18,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             position: [ 0, 0, 12 ]            
         } }
         >
-        <Experience />
+        {/* <Suspense fallback={null}>
+          <Experience />
+        </Suspense> */}
       </Canvas>
-      {/* <LoadingPage /> */}
+      <Navbar />      
+      <LoadingPage />
   </React.StrictMode>
 )

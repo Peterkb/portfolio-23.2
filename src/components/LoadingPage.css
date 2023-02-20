@@ -23,7 +23,6 @@
     place-items: center;
     text-align: center;
 
-    
     background-color: var(--Loader-Color-Start);
     animation: loaderColorChange 500ms ease-in 500ms;
     animation-fill-mode: forwards;
