@@ -1,6 +1,8 @@
-import { create } from "zustand"
+import {create} from 'zustand'
+import { subscribeWithSelector } from 'zustand/middleware'
 
-export default create((set) => {
+export default create(subscribeWithSelector((set) =>
+{
     return {
         /**
          * Progress
@@ -12,34 +14,38 @@ export default create((set) => {
          * Time
          */
         startTime: 0,
-        endTime: 0,
 
         /**
          * Phases
          */
-        phase: 'ready',
+        phase: 'start',
 
-        start: () =>
+        ready: () =>
         {
             set((state) =>
             {
-                if (state.phase === 'ready') {
-                    return console.log('Site ready')
+                if (state.phase === 'loading') {
+                    console.log('site ready');
+                    return {
+                        phase: 'ready'
+                    }
                 }
                 return {}
             })
         },
 
-        phase: 'loading',
         load: () =>
         {
             set((state) =>
             {
-                if (state.phase === 'loading') {
-                    return console.log('Site loading')
+                if (state.phase === 'start') {
+                    console.log('site loading');
+                    return {
+                        phase: 'loading'
+                    }
                 }
                 return {}
             })
         }
     }
-})
+}))
