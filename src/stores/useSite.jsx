@@ -46,6 +46,20 @@ export default create(subscribeWithSelector((set) =>
                 }
                 return {}
             })
+        },
+
+        go: () =>
+        {
+            set((state) =>
+            {
+                if (state.phase === 'ready') {
+                    console.log('lets go!');
+                    return {
+                        phase: 'go'
+                    }
+                }
+                return {}
+            })
         }
     }
 }))

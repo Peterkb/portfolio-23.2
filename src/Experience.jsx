@@ -21,11 +21,7 @@ export default function Experience()
 
                 {/* About Section */}
                 <div className="container">                    
-                    {/* About Me */}
-                    <h2 className="title">About Me</h2>
                     
-                    {/* My Skills */}
-                    <h2 className="title">About Me</h2>
                 </div>
                 
                 {/* Projects Section */}

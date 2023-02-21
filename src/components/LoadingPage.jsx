@@ -1,5 +1,5 @@
 import { addEffect } from '@react-three/fiber'
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import useSite from '../stores/useSite'
 
 import loaderLogo from '../assets/img/LogoPB.png'
@@ -15,10 +15,24 @@ export default function LoadingPage()
     const counter = useRef()
 
     const phase = useSite((state) => state.phase)
-    console.log(phase);
 
     const load = useSite((state) => state.load)
+    let go = useSite((state) => state.go)
     const ready = useSite((state) => state.ready)
+
+    const [ siteLoading, setSiteLoading ] = useState(true)
+
+    useEffect(() => {
+        if (phase === 'ready') {            
+            window.addEventListener('scroll',scroll = (e) =>
+            {
+                setSiteLoading(false)
+                go()
+            })       
+
+            return () => window.removeEventListener('scroll', scroll )            
+        }
+    }, [phase])
 
     useEffect(() =>
     {
@@ -36,9 +50,11 @@ export default function LoadingPage()
             
             if(state.phase === 'loading' && state.siteProgress >= 100) state.ready()
 
-            if (state.phase === 'ready') {
-                startBox.current.classList.add('fadeOut')
-                readyBox.current.classList.remove('hidden')
+            if (state.phase === 'ready' && siteLoading == true) {
+                if (startBox.current) {
+                    startBox.current.classList.add('fadeOut')
+                    readyBox.current.classList.remove('hidden')
+                }
             }
 
             let percentage = state.siteProgress    
@@ -56,6 +72,7 @@ export default function LoadingPage()
     }, [])
 
     return <>
+        {siteLoading ? 
         <div ref={overlay} className="loaderOverlay" id="Loader">
             <div ref={startBox} className="startingBox">
                 <div className="loader-grid-item loader-background"></div>
@@ -98,15 +115,16 @@ export default function LoadingPage()
 
                 {/* Subtitle */}
                 <div className="readySubTitleBox">
-                    <div className="arrowBox">
+                    <div className="arrowBox me-3">
                         <img src={arrow} className="readyArrow ready-Arrow-a1" alt="arrow" />
                         <img src={arrow} className="readyArrow ready-Arrow-a2" alt="arrow" />
                     </div>
                     <div className="readyScrollText">
-                        Scroll Down For More...
+                        Scroll For More...
                     </div>
                 </div>
             </div>
         </div>
+        : null}
     </>
 }
