@@ -66,7 +66,8 @@ export default function()
                 </button>
                 <div className="collapse navbar-collapse"  id="navbarNav">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li data-nav="Hero" className="nav-item active">
+                        {/* TODO: set active depending on section */}
+                        <li data-nav="Hero" className="nav-item">
                             <a href="#Hero" className="nav-link">Home</a>
                         </li>
                         <li data-nav="About" className="nav-item">
