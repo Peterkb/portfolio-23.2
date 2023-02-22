@@ -25,7 +25,6 @@ export default create(subscribeWithSelector((set) =>
             set((state) =>
             {
                 if (state.phase === 'loading') {
-                    console.log('site ready');
                     return {
                         phase: 'ready'
                     }
@@ -39,7 +38,6 @@ export default create(subscribeWithSelector((set) =>
             set((state) =>
             {
                 if (state.phase === 'start') {
-                    console.log('site loading');
                     return {
                         phase: 'loading'
                     }
@@ -53,7 +51,6 @@ export default create(subscribeWithSelector((set) =>
             set((state) =>
             {
                 if (state.phase === 'ready') {
-                    console.log('lets go!');
                     return {
                         phase: 'go'
                     }

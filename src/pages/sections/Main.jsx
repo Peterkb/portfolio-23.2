@@ -214,13 +214,7 @@ export default function()
                 </div> --> */}
 
                 {/* <!-- Contact Section --> */}
-                <div className="row section content" id="Contact">
-                    <div className="col">
-                        <h2 className='profOrange'>Contact</h2>
-                        <div className='mb-3'>Thank you for visiting my portfolio, please leave a message or suggestion on your way out!</div>
-                        <ContactUs />
-                    </div>
-                </div>
+                <ContactUs />
             </div>
 
         {/* <!--Footer Section--> */}

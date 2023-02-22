@@ -16,21 +16,22 @@ export default function LoadingPage()
 
     const phase = useSite((state) => state.phase)
 
-    const load = useSite((state) => state.load)
+    // const load = useSite((state) => state.load)
     let go = useSite((state) => state.go)
-    const ready = useSite((state) => state.ready)
+    // const ready = useSite((state) => state.ready)
 
     const [ siteLoading, setSiteLoading ] = useState(true)
 
-    useEffect(() => {
-        if (phase === 'ready') {            
-            window.addEventListener('scroll',scroll = (e) =>
-            {
-                setSiteLoading(false)
-                go()
-            })       
+    const handleScroll = (e) => { 
+        setSiteLoading(false)
+        go()
+    }
 
-            return () => window.removeEventListener('scroll', scroll )            
+    useEffect(() => {
+        console.log(`State: ${phase}`);
+        if (phase === 'ready') {
+            window.addEventListener('keypress', handleScroll);
+            return () => window.removeEventListener('keypress', handleScroll);
         }
     }, [phase])
 
@@ -73,9 +74,9 @@ export default function LoadingPage()
 
     return <>
         {siteLoading ? 
-        <div ref={overlay} className="loaderOverlay" id="Loader">
+        <div ref={overlay} className="loaderOverlay">
             <div ref={startBox} className="startingBox">
-                <div className="loader-grid-item loader-background"></div>
+                {/* <div className="loader-grid-item loader-background"></div> */}
                 <div className="loader-grid-item loader-transition"></div>
                 <div className="loader-grid-item loader-logo-box">
                     <img className='loader-logo-img' src={loaderLogo} />
@@ -100,7 +101,7 @@ export default function LoadingPage()
             </div>
 
             <div ref={readyBox} className="readyBox hidden">
-            {/* Logo */}
+                {/* Logo */}
                 <div className="readyLogoBox">
                     <img className="welcomeLogo" src={loaderLogo} alt="" />
                 </div>
