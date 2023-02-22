@@ -60,14 +60,25 @@ const Sections = React.memo(() =>
                                                 <div className="project-content">
                                                         <h5 className="title">{project.Title}</h5>
                                                         <p className="description content-item">{project.ShortDescription}</p>
-                                                        <a type="button" className="link-primary content-item" data-bs-toggle="modal" data-bs-target={project.Modal}>
-                                                            More Info
-                                                        </a>
+                                                        <div className="row">
+                                                            <div className="col">
+                                                                <a type="button" className={`link-proj ${project.SiteLink === 'private' ? 'disabled' : ''}`} href={project.SiteLink} target="_blank">
+                                                                    {/* <img src={'https://img.icons8.com/external-anggara-basic-outline-anggara-putra/15/07B4F6/external-screen-ui-basic-anggara-basic-outline-anggara-putra.png'} alt="Screen Logo" /> */}
+                                                                    Site
+                                                                </a>
+                                                            </div>
+                                                            <div className="col">
+                                                                <a type="button" className={`link-proj ${project.GitLink == 'private' ? 'disabled' : ''}`} href={project.GitLink} target="_blank">
+                                                                    <span>Source</span>
+                                                                    {/* <img src={'https://img.icons8.com/windows/15/07B4F6/code-fork--v1.png'} alt="Github Logo" /> */}
+                                                                </a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     {project.Featured ? <div className="featured">Featured</div> : ''}
                                             </article>
 
-                                            <div className="modal myModal fade" id={project.Modal} tabIndex="-1" aria-labelledby={`${project.Title} Info`} aria-hidden="true">
+                                            {/* <div className="modal myModal fade" id={project.Modal} tabIndex="-1" aria-labelledby={`${project.Title} Info`} aria-hidden="true">
                                                 <div className="modal-dialog modal-fullscreen">
                                                     <div className="modal-header">
                                                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -75,7 +86,8 @@ const Sections = React.memo(() =>
 
                                                     <div className="modal-body">
                                                         <div className="row">
-                                                            {/* <!-- left side --> */}
+
+                                                            
                                                             <div className="col">
                                                                 <div className="h2 mb-3">${project.Title}</div>
                                                                 
@@ -98,7 +110,7 @@ const Sections = React.memo(() =>
                                                                     <li>tech</li>
                                                                 </ul>
 
-                                                            {/* <!-- right side --> */}
+                                                            
                                                             </div>
                                                             <div className="col">
                                                                 <div className="h5">Features</div>
@@ -116,7 +128,7 @@ const Sections = React.memo(() =>
                                                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                     </div>
                                 }) }
                             </div>

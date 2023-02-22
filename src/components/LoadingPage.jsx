@@ -22,16 +22,31 @@ export default function LoadingPage()
 
     const [ siteLoading, setSiteLoading ] = useState(true)
 
-    const handleScroll = (e) => { 
-        setSiteLoading(false)
-        go()
+    const handleScroll = (e) => {        
+        // go()
+        // readyBox.current.classList.add('fadeOut')
+        // overlay.current.classList.add('fadeOut')
+        
+        // setSiteLoading(false)
     }
 
+    // TODO! Fix Scroll EVENT!
     useEffect(() => {
         console.log(`State: ${phase}`);
         if (phase === 'ready') {
-            window.addEventListener('keypress', handleScroll);
-            return () => window.removeEventListener('keypress', handleScroll);
+            const timer = setTimeout(() => {
+                go()
+                overlay.current.classList.add('fadeOut')
+            }, 2500);
+            return () => clearTimeout(timer);
+            // window.addEventListener('keypress', handleScroll);            
+            // return () => window.removeEventListener('keypress', handleScroll);
+        }
+        if (phase === 'go') {
+            const timer = setTimeout(() => {
+                setSiteLoading(false)
+            }, 1200);
+            return () => clearTimeout(timer);
         }
     }, [phase])
 
@@ -121,7 +136,12 @@ export default function LoadingPage()
                         <img src={arrow} className="readyArrow ready-Arrow-a2" alt="arrow" />
                     </div>
                     <div className="readyScrollText">
-                        Scroll For More...
+                        {/* Scroll For More... */}
+                        Lets have some fun...
+                    </div>
+                    <div className="arrowBox ms-3">
+                        <img src={arrow} className="readyArrow ready-Arrow-a1" alt="arrow" />
+                        <img src={arrow} className="readyArrow ready-Arrow-a2" alt="arrow" />
                     </div>
                 </div>
             </div>

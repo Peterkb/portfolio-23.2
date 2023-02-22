@@ -25,7 +25,7 @@ const projects =
             technologies.postgreSql
         ],
         BannerLink: 'https://i.postimg.cc/xTy7N3DK/Bug-Tracks.png',
-        SiteLink: '',
+        SiteLink: 'private',
         GitLink: 'https://github.com/Peterkb/BugTracks',
 
         Featured: true,
@@ -138,7 +138,7 @@ const projects =
             technologies.sourceControl
         ],
         BannerLink: 'https://bootstrapmade.com/content/templatefiles/Techie/Techie-bootstrap-website-template.avif',
-        SiteLink: '',
+        SiteLink: '#',
         GitLink: '#',
 
         Featured: false,
@@ -263,8 +263,8 @@ const projects =
             technologies.sourceControl
         ],
         BannerLink: 'https://i.postimg.cc/hGZ2BFM2/LionOil.png',
-        SiteLink: '',
-        GitLink: '#',
+        SiteLink: 'https://snazzy-hamster-700577.netlify.app/code.html',
+        GitLink: 'https://github.com/Peterkb/LionOil',
 
         Featured: false,
         isReady: true,

@@ -87,6 +87,12 @@ a {
   text-decoration: none;
 }
 
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: grey;
+}
+
 /* poppins-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

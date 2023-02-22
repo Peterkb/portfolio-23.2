@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { Html, OrbitControls, useGLTF, Text3D, Center, Float, PivotControls, ScrollControls, Scroll, useIntersect  } from "@react-three/drei"
+import { Html, OrbitControls, useGLTF, Text3D, Center, Float, PivotControls, ScrollControls, Scroll, useIntersect, Sparkles  } from "@react-three/drei"
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber"
 import { useEffect, useRef } from "react"
 import Model from "./components/models/Model"
@@ -67,6 +67,23 @@ export default function Experience()
                                 </group>
                             </Center>
                         </Float>
+                        
+                        <Sparkles
+                            size={ 6 }
+                            scale={ [20, 15, 5] }
+                            position-y={ 0 }
+                            speed={ 0.3 }
+                            count={ 100 }
+                        />
+
+                        <Sparkles
+                            size={ 10 }
+                            scale={ [15, 6, 5] }
+                            position={ [-4, 0, 0] }
+                            speed={ 0.4 }
+                            count={ 100 }
+                            rotation={[-0.30, 0.35, 0.25]}
+                        />
                         
                         <group position={[6, -3, 7]}>
                             <Model

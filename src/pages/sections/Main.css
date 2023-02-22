@@ -1101,6 +1101,15 @@ hr {
     transition: 0.3s ease-out;
 }
 
+.link-proj > img {
+    width: 15px;
+    height: 15px;
+}
+
+.link-proj:hover {
+    color: var(--Yellow);
+}
+
 .bugtracks::before,
 .contactCrate::before,
 .itaecco::before,
@@ -1108,6 +1117,7 @@ hr {
 .blog::before
 {
     background-color: #282634;
+    /* background-color: #3ca13c; */
 }
 
 .fizzbuzz::before {
@@ -1158,7 +1168,7 @@ hr {
 }
 
 .project:hover::before {
-    translate: 0 -5%;
+    /* translate: 0 -5%; */
     scale: 1.01;
     transition: 0.5s;
 }

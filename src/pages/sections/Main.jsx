@@ -51,7 +51,7 @@ export default function()
                 <div className="row section content" id="About">
                     <div className="col">
                         <h2>About Me</h2>
-                        <p>Full Stack Developer</p>
+                        <p className='mb-5'>As a project manager, I discovered my passion for coding when I started using it as a tool to solve problems and streamline processes. The more I used it, the more I realized that coding was not just a means to an end, but a passion in itself. I became obsessed with learning new programming languages, frameworks, and tools, and I began to apply my coding skills to improve project management workflows and create custom solutions.</p>
 
                         <h2>My Skills</h2>
                         <p>What I currently bring to the table.</p>
@@ -68,12 +68,13 @@ export default function()
                                         <div className="card-text">
                                             <h5 className="skill-title">Languages</h5>
                                             <ul>
+                                                <li>C#</li>
                                                 <li>JavaScript</li>
-                                                <li>Html</li>
-                                                <li>CSS</li>    
+                                                <li>Html5</li>
+                                                <li>CSS3</li>    
                                                 <li>jQuery</li>
                                                 <li>Bootstrap</li>
-                                                <li>react</li>
+                                                <li>React</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -183,7 +184,7 @@ export default function()
                                         </div>
                                         <div className="card-text">
                                             <h5 className="skill-title">Always Learning</h5>
-                                            <p>I love solving problems and learning by doing so every day.</p>
+                                            <p>I love solving problems and learning by doing so every day. Always keen to learn the right tool for the job.</p>
                                         </div>
                                     </div>
                                 </div>

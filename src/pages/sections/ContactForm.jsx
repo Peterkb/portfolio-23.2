@@ -52,7 +52,7 @@ export const ContactUs = () => {
       <div className="row section content" id="Contact">
         <div className="col">
           <h2 className='profOrange'>Contact</h2>
-          <div className='mb-3'>Thank you for visiting my portfolio, please leave a message or suggestion on your way out!</div>
+          <div className='mb-3'>Hey there! Thanks for checking out my portfolio website, it means a lot! If you have any suggestions or feedback, I'd love to hear it. Let me know what you think or get in Contact!</div>
             <form className='form' ref={form} onSubmit={sendEmail}>
            <div className="mb-3 row">
              <label className="col-sm-2 col-form-label">Name</label>
