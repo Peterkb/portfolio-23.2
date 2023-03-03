@@ -215,8 +215,8 @@ const projects =
             technologies.sourceControl
         ],
         BannerLink: 'https://i.postimg.cc/G2jrcwzs/FizzBuzz.png',
-        SiteLink: 'https://cerulean-strudel-05fc4c.netlify.app/index.html',
-        GitLink: 'https://github.com/Peterkb/FizzBuzz',
+        SiteLink: 'https://tourmaline-lebkuchen-0d3a70.netlify.app/apps/fizzbuzz/app',
+        GitLink: 'https://github.com/Peterkb/JS-Mastery/tree/main/apps/fizzBuzz',
 
         Featured: false,
         isReady: true,
