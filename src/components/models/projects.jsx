@@ -215,8 +215,8 @@ const projects =
             technologies.sourceControl
         ],
         BannerLink: 'https://i.postimg.cc/G2jrcwzs/FizzBuzz.png',
-        SiteLink: 'https://tourmaline-lebkuchen-0d3a70.netlify.app/apps/fizzbuzz/app',
-        GitLink: 'https://github.com/Peterkb/JS-Mastery/tree/main/apps/fizzBuzz',
+        SiteLink: 'https://tourmaline-lebkuchen-0d3a70.netlify.app/apps/fizz-buzz/app.html',
+        GitLink: 'https://github.com/Peterkb/JS-Mastery/tree/main/apps/fizz-buzz',
 
         Featured: false,
         isReady: true,
@@ -224,7 +224,7 @@ const projects =
         Css: 'fizzbuzz'
     },
     EasyLoan: {
-        Title: "Mortage Calculator",
+        Title: "Easy Loan",
         ShortDescription: 'Amortization calculator',
         LongDescription: 'A web based application that displays an amortization table with monthly payment information taking in the principal amount, number of payments and intrest rate as user input. It is achieved by using regular expressions, objects, loops, functions, and conditional statements.',
         Features: [
@@ -239,8 +239,8 @@ const projects =
             technologies.sourceControl
         ],
         BannerLink: 'https://i.postimg.cc/BQfDJ9MM/EasyLoan.png',
-        SiteLink: 'https://spectacular-frangollo-95a65a.netlify.app/',
-        GitLink: 'https://github.com/Peterkb/LoanCalculator',
+        SiteLink: 'https://tourmaline-lebkuchen-0d3a70.netlify.app/apps/easy-loan/app.html',
+        GitLink: 'https://github.com/Peterkb/JS-Mastery/tree/main/apps/easy-loan',
 
         Featured: false,
         isReady: true,
@@ -263,8 +263,8 @@ const projects =
             technologies.sourceControl
         ],
         BannerLink: 'https://i.postimg.cc/hGZ2BFM2/LionOil.png',
-        SiteLink: 'https://snazzy-hamster-700577.netlify.app/code.html',
-        GitLink: 'https://github.com/Peterkb/LionOil',
+        SiteLink: 'https://tourmaline-lebkuchen-0d3a70.netlify.app/apps/lion-oil/app.html',
+        GitLink: 'https://github.com/Peterkb/JS-Mastery/tree/main/apps/lion-oil',
 
         Featured: false,
         isReady: true,
