@@ -26,7 +26,7 @@ const projects =
         ],
         BannerLink: 'https://i.postimg.cc/xTy7N3DK/Bug-Tracks.png',
         SiteLink: 'private',
-        GitLink: 'https://github.com/Peterkb/BugTracks',
+        GitLink: 'private',
 
         Featured: true,
         isReady: true,
@@ -54,7 +54,7 @@ const projects =
         ],
         BannerLink: 'https://i.postimg.cc/9QcbfVBf/Contact-Crate1.png',
         SiteLink: 'https://contactcrate.up.railway.app/',
-        GitLink: 'https://github.com/Peterkb/ContactCrate',
+        GitLink: 'private',
 
         Featured: false,
         isReady: true,
@@ -82,8 +82,8 @@ const projects =
             technologies.sourceControl
         ],
         BannerLink: 'https://i.postimg.cc/XqPYDd1s/Code-Drops.png',
-        SiteLink: '',
-        GitLink: '',
+        SiteLink: 'private',
+        GitLink: 'private',
 
         Featured: false,
         isReady: true,
