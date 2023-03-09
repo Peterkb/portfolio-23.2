@@ -130,7 +130,7 @@ nav span {
 
 .nav-link:hover {
     color: var(--Tertiary) !important;
-    scale: 1.04;
+    scale: 1.05;
     transition: 0.5s;
 }
 
@@ -304,7 +304,7 @@ nav span {
     width: 0.8em;
     height: 0.8em;
     background-color: var(--Primary);
-    transition: 0.2s;
+    /* transition: 0.2s; */
 }
 
 .toggle-button:hover .toggle-circle{

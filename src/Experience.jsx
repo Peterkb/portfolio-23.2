@@ -36,7 +36,7 @@ export default function Experience()
     const offset = 0.15
 
     useFrame((state, delta) => {
-        console.log(`W: ${width} / H: ${height} / T: ${top}`);
+        // console.log(`W: ${width} / H: ${height} / T: ${top}`);
     })
 
     useEffect(() => {
@@ -70,20 +70,20 @@ export default function Experience()
                         
                         <Sparkles
                             size={ 6 }
-                            scale={ [20, 15, 5] }
+                            scale={ [40, 15, 5] }
                             position-y={ 0 }
                             speed={ 0.3 }
                             count={ 100 }
                         />
 
-                        <Sparkles
+                        {/* <Sparkles
                             size={ 10 }
                             scale={ [15, 6, 5] }
                             position={ [-4, 0, 0] }
                             speed={ 0.4 }
                             count={ 100 }
                             rotation={[-0.30, 0.35, 0.25]}
-                        />
+                        /> */}
                         
                         <group position={[6, -3, 7]}>
                             <Model

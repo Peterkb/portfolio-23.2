@@ -1384,3 +1384,11 @@ footer .social>a:hover{
 
 /* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode; */
 /* https://cubic-bezier.com */
+
+
+/* Responsiveness */
+@media (max-width: 990px){
+    h2, p {
+        text-align: center;
+    }
+}
