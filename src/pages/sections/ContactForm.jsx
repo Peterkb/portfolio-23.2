@@ -28,13 +28,6 @@ export const ContactUs = () => {
             <form ref={form} onSubmit={sendEmail}>
 
             {/* Name */}
-            {/* <div className="mb-3 row">
-              <label className="col-sm-2 col-form-label">Name</label>
-              <div className="col">
-                <div className="col"><input type="text" name="from_name" /></div>
-              </div>
-            </div> */}
-
             <div className="mb-5 wave-group">
               <input required type="text" className="input" name="from_name" />
               <span className="bar"></span>
@@ -48,13 +41,6 @@ export const ContactUs = () => {
 
 
             {/* Email */}
-            {/* <div className="mb-3 row">
-              <label className="col-sm-2 col-form-label">Email</label>
-              <div className="col">
-                <div className="col"><input type="email" name="user_email" /></div>
-              </div>
-            </div> */}
-
             <div className="mb-5 wave-group">
               <input required type="text" className="input" name="user_email" />
               <span className="bar"></span>
@@ -68,13 +54,6 @@ export const ContactUs = () => {
             </div>
 
             {/* Message */}
-            {/* <div className="mb-3 row">
-              <label className="col-sm-2 col-form-label">Message</label>
-              <div className="col">
-                <div className="col"><textarea name="message" rows="3" maxLength="144"/></div>
-              </div>
-            </div> */}
-
             <div className="mb-5 wave-group">
               <textarea required type="text" className="input" name="message"  rows="3" maxLength="144" />
               <span className="bar"></span>
@@ -89,6 +68,7 @@ export const ContactUs = () => {
               </label>
             </div>
 
+            {/* TODO: Change Button on Submit */}
             {/* Button */}
             <input className='btn btn-primary' type="submit" value="Send" />
          </form>
