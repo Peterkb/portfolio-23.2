@@ -59,11 +59,7 @@ export default function()
                         </span>
                     </span>
                 </a>
-                <button className="navbar-toggler collapsed d-flex d-xl-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="toggler-icon top-bar"></span>
-                    <span className="toggler-icon middle-bar"></span>
-                    <span className="toggler-icon bottom-bar"></span>
-                </button>
+
                 <div className="collapse navbar-collapse"  id="navbarNav">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         {/* TODO: set active depending on section */}
@@ -83,6 +79,13 @@ export default function()
                         </li>
                     </ul>
                 </div>
+
+                <button className="navbar-toggler collapsed d-flex d-xl-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="toggler-icon top-bar"></span>
+                    <span className="toggler-icon middle-bar"></span>
+                    <span className="toggler-icon bottom-bar"></span>
+                </button>
+
             </div>
         </nav>
     </>

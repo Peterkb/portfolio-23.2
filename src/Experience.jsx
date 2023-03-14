@@ -1,7 +1,7 @@
 import * as THREE from 'three'
-import { Html, OrbitControls, useGLTF, Text3D, Center, Float, PivotControls, ScrollControls, Scroll, useIntersect, Sparkles  } from "@react-three/drei"
+import { Html, OrbitControls, useGLTF, Text3D, Center, Float, PivotControls, ScrollControls, Scroll, useIntersect, Sparkles, Points, PointMaterial  } from "@react-three/drei"
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import Model from "./components/models/Model"
 
 import Main from './pages/sections/Main'
@@ -10,8 +10,7 @@ import Lights from "./world/Lights"
 export default function Experience()
 {
     // const { width, height } = useThree((state) => state.viewport)
-    const { width, height, top } = useThree((state) => state.size)
-    
+    const { width, height, top } = useThree((state) => state.size)    
 
     const textMattBlue = new THREE.MeshStandardMaterial({ color: '#4C9BF6', metalness: 0, roughness: 0 })
     const TextMattOrange = new THREE.MeshStandardMaterial({ color: '#F64B07', metalness: 0, roughness: 0 })
@@ -48,7 +47,7 @@ export default function Experience()
             {/* <OrbitControls /> */}
 
             {/* <PivotControls scale={3}> */}
-                <ScrollControls pages={5}>                    
+                <ScrollControls pages={4}>                    
                     <Scroll>
                         {/* Page 1 */}
                         <Float
@@ -75,16 +74,7 @@ export default function Experience()
                             speed={ 0.3 }
                             count={ 100 }
                         />
-
-                        {/* <Sparkles
-                            size={ 10 }
-                            scale={ [15, 6, 5] }
-                            position={ [-4, 0, 0] }
-                            speed={ 0.4 }
-                            count={ 100 }
-                            rotation={[-0.30, 0.35, 0.25]}
-                        /> */}
-                        
+                                                
                         <group position={[6, -3, 7]}>
                             <Model
                                 link='https://github.com/Peterkb'
@@ -98,7 +88,11 @@ export default function Experience()
                                 rotation={[1.5, 0, 0.1]}/>
                         </group>
                         {/* Page 2 - About */}
-
+                        <Center  top left>
+                            <Html as='div' wrapperClass="siteHtml">
+                                <Main />
+                            </Html>
+                        </Center>
                         
                         {/* Page 3 - Skills */}
 
@@ -111,9 +105,9 @@ export default function Experience()
 
                     </Scroll>
 
-                    <Scroll html style={{width: '100%'}}>
+                    {/* <Scroll html style={{width: '100%'}}> */}
                         {/* Page 1 */}
-                        <Main />
+                        {/* <Main /> */}
                         
                         {/* Page 2 - About */}
 
@@ -127,9 +121,7 @@ export default function Experience()
                         {/* Page 5 - Contact*/}
 
 
-                    </Scroll>
-
-                    
+                    {/* </Scroll> */}
                     
                         {/* <Html>
                             

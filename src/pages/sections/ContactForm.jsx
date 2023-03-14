@@ -32,8 +32,10 @@ export const ContactUs = () => {
           setTimeout(() => {            
             sendButton.current.childNodes[0].classList.remove('buttonHide')
             sendButton.current.childNodes[1].classList.add('buttonHide')
-            sendButton.current.childNodes[1].childNodes[0].classList.remove('sending')
-            sendButton.current.childNodes[1].childNodes[0].innerText = 'Sending'
+            setTimeout(() => {
+              sendButton.current.childNodes[1].childNodes[0].classList.add('sending')
+              sendButton.current.childNodes[1].childNodes[0].innerText = 'Sending'
+            }, 1000);
           }, 1000);
       }, (error) => {
           console.log(error.text);
@@ -44,8 +46,8 @@ export const ContactUs = () => {
     <div className="container form">
       <div className="row section" id="Contact">
         <div className="col">
-          <h2 className='profOrange'>Contact</h2>
-          <div className='mb-5 px-2'>Hey there! Thanks for checking out my portfolio website! If you have any suggestions or feedback, I'd love to hear it. Let me know what you think or get in Contact!</div>
+          <h2 className='profOrange mb-4'>Contact</h2>
+          <div className='mb-5'>Hey there! Thanks for checking out my portfolio website! If you have any suggestions or feedback, I'd love to hear it. Let me know what you think or get in Contact!</div>
             <form ref={form} onSubmit={sendEmail}>
 
             {/* Name */}
