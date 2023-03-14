@@ -13,8 +13,7 @@ export default function Model({modelPath, position=[0, 0, 0], link='#', rotation
     const iconHover = (e) =>
     {
         document.body.style.cursor = 'pointer'
-        console.log(icon.current.material);
-        icon.current.material.set(TextMattYellow)
+        // console.log(icon.current.material);
     }
 
     const iconUnHover = (e) =>

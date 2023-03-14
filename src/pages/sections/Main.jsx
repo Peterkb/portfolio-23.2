@@ -195,7 +195,7 @@ export default function()
                         <hr className="divider" />
 
                         <div className="d-flex gap-3">
-                            <a className="btn btn-outline-primary" href="#Projects">Porfolio</a>
+                            <a className="btn btn-outline-primary" href="#Projects">Projects</a>
                             <a className="btn btn-outline-primary" target="_blank" href="https://github.com/Peterkb">Github</a>
                             <a className="btn btn-outline-primary ms-auto" href="#Contact">Let's Talk</a>
                         </div>

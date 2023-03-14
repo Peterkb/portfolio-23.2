@@ -5,15 +5,36 @@ import './contact-form.css'
 
 export const ContactUs = () => {
   const form = useRef();
+  const sendButton = useRef();
+
+  // console.log(sendButton.current);
 
   const sendEmail = (e) => {
     e.preventDefault();
     
+    sendButton.current.childNodes[1].childNodes[0].classList.add('sending')
+    sendButton.current.childNodes[0].classList.add('buttonHide')
+    sendButton.current.childNodes[1].classList.remove('buttonHide')
     console.log(form.current);
 
+    // lRTM8-ySJzsgZf0iK
     emailjs.sendForm('service_184qhct', 'template_qsxz9ox', form.current, 'lRTM8-ySJzsgZf0iK')
       .then((result) => {
           console.log(result.text);
+
+          form.current.childNodes[0].childNodes[0].value = ""
+          form.current.childNodes[1].childNodes[0].value = ""
+          form.current.childNodes[2].childNodes[0].value = ""
+
+          sendButton.current.childNodes[1].childNodes[0].classList.remove('sending')
+          sendButton.current.childNodes[1].childNodes[0].innerText = 'Success'
+
+          setTimeout(() => {            
+            sendButton.current.childNodes[0].classList.remove('buttonHide')
+            sendButton.current.childNodes[1].classList.add('buttonHide')
+            sendButton.current.childNodes[1].childNodes[0].classList.remove('sending')
+            sendButton.current.childNodes[1].childNodes[0].innerText = 'Sending'
+          }, 1000);
       }, (error) => {
           console.log(error.text);
       })
@@ -42,7 +63,7 @@ export const ContactUs = () => {
 
             {/* Email */}
             <div className="mb-5 wave-group">
-              <input required type="text" className="input" name="user_email" />
+              <input required type="email" className="input" name="user_email" />
               <span className="bar"></span>
               <label className="label">
                 <span className="label-char" style={{ '--index': 0 }}>E</span>
@@ -70,7 +91,14 @@ export const ContactUs = () => {
 
             {/* TODO: Change Button on Submit */}
             {/* Button */}
-            <input className='btn btn-primary' type="submit" value="Send" />
+            <div ref={sendButton} className="sendingButtons">
+              <div className="button-grid-item">
+                <input className='btn btn-primary' type="submit" value="Send" />
+              </div>
+              <div className="btn btn-primary button-grid-item buttonHide">
+                <span className="sending">Sending</span>
+              </div>
+            </div>
          </form>
           </div>
       </div>

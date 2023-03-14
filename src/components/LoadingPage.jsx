@@ -137,11 +137,7 @@ export default function LoadingPage()
                     </div>
                     <div className="readyScrollText">
                         {/* Scroll For More... */}
-                        Lets have some fun...
-                    </div>
-                    <div className="arrowBox ms-3">
-                        <img src={arrow} className="readyArrow ready-Arrow-a1" alt="arrow" />
-                        <img src={arrow} className="readyArrow ready-Arrow-a2" alt="arrow" />
+                        Thanks for stopping by...
                     </div>
                 </div>
             </div>
