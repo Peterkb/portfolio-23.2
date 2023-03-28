@@ -24,7 +24,7 @@ const projects =
             technologies.sourceControl,
             technologies.postgreSql
         ],
-        BannerLink: 'https://i.postimg.cc/xTy7N3DK/Bug-Tracks.png',
+        BannerLink: 'https://i.postimg.cc/cLnZqTby/Ticket-Flux-Light.png',
         SiteLink: 'https://ticketflux-production.up.railway.app/',
         GitLink: 'https://github.com/Peterkb/TicketFlux/',
 
