@@ -4,7 +4,7 @@ import features from './features.jsx'
 const projects =
 {
     FastTrack: {
-        Title: "Fast Track",
+        Title: "TicketFlux",
         Slogan: "Log it, Track it, Done",
         ShortDescription: 'Issue Tracking Web Application',
         LongDescription: 'is a longer description',
@@ -25,13 +25,13 @@ const projects =
             technologies.postgreSql
         ],
         BannerLink: 'https://i.postimg.cc/xTy7N3DK/Bug-Tracks.png',
-        SiteLink: 'private',
-        GitLink: 'private',
+        SiteLink: 'https://ticketflux-production.up.railway.app/',
+        GitLink: 'https://github.com/Peterkb/TicketFlux/',
 
         Featured: true,
         isReady: true,
-        Modal: 'BugTracksModal',
-        Css: 'bugtracks'       
+        Modal: 'TicketFluxModal',
+        Css: 'bugtracks'
     },
     ContactCrate: {
         Title: "Contact Crate",
