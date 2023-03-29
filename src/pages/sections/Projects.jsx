@@ -20,8 +20,8 @@ const Sections = React.memo(() =>
             Title: 'Full Stack Projects',
             Projects: [
                 proj.FastTrack,
-                proj.ContactCrate,
-                proj.Blog,
+                //proj.ContactCrate,
+                //proj.Blog,
                 //proj.MoviePro,
                 //proj.BlazorCom,
             ]
